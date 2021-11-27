@@ -1,12 +1,9 @@
 from beginTasks import beginTasks
 from integerTasks import integerTasks
 from booleanTasks import booleanTasks
+from helpers import merge_dicts
 
-allTasks = {
-    **beginTasks,
-    **integerTasks,
-    **booleanTasks
-}
+allTasks = merge_dicts(beginTasks, integerTasks, booleanTasks)
 
 print("___________________________________________________________")
 print("Для начала работы с кодом введите название требуемой задачи")
