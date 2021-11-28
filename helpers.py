@@ -10,8 +10,9 @@ def merge_dicts(first, second, third):
             **third
         }
     else:
-        merged_dict = merge_dicts(first, second)
-        merged_dict = merge_dicts(merged_dict, third)
+        merged_dict = first.copy()
+        merged_dict.update(second)
+        merged_dict.update(third)
     return merged_dict
 
 
