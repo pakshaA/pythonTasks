@@ -24,14 +24,19 @@ def read_and_check(welcome_text="", params_count=1, param_names=[], output_type=
     output_arr = []
 
     for i in range(params_count):
-        curr = input_list[i]
+        curr_str = input_list[i]
         while True:
             try:
-                curr_float = float(curr)
-                output_arr.append(curr_float)
+                if output_type == "float":
+                    curr_typed = float(curr_str)
+                elif output_type == "int":
+                    curr_typed = int(curr_str)
+                else:
+                    curr_typed = curr_str
+                output_arr.append(curr_typed)
                 break
             except ValueError:
                 curr_param_name = f"Параметр №{i+1}" if len(param_names) == 0 else param_names[i]
                 input_curr = input(curr_param_name+f" не является типом {output_type}. Введите его заново: ").split()
-                curr = input_curr[0] if len(input_curr) else ""
+                curr_str = input_curr[0] if len(input_curr) else ""
     return output_arr if params_count > 1 else output_arr[0]
