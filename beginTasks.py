@@ -217,6 +217,13 @@ def begin27():
           "A^8 = ", a**8)
 
 
+def begin28():
+    a = read_and_check("Введите значение А: ", output_type="float")
+    print("A^5 = ", a**5, '\n'
+          "A^10 = ", a**10, '\n'
+          "A^15 = ", a**15)
+
+
 beginTasks = {
     "begin1": begin1,
     "begin2": begin2,
@@ -245,4 +252,5 @@ beginTasks = {
     "begin25": begin25,
     "begin26": begin26,
     "begin27": begin27,
+    "begin28": begin28
 }
