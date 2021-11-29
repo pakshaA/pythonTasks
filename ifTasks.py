@@ -2,7 +2,7 @@ from helpers import read_and_check
 
 
 def if1():
-    a = read_and_check("Введите ваше число: ", output_type="int")
+    a = read_and_check("Введите число: ", output_type="int")
     if a > 0:
         print(f"Число {a} - положительное. Ответ = ", a + 1)
     else:
@@ -10,7 +10,7 @@ def if1():
 
 
 def if2():
-    a = read_and_check("Введите ваше число: ", output_type="int")
+    a = read_and_check("Введите число: ", output_type="int")
     if a > 0:
         print(f"Число {a} - положительное. Ответ = ", a + 1)
     else:
@@ -18,7 +18,7 @@ def if2():
 
 
 def if3():
-    a = read_and_check("Введите ваше число: ", output_type="int")
+    a = read_and_check("Введите число: ", output_type="int")
     if a > 0:
         print(f"Число {a} - положительное. Ответ = ", a + 1)
     elif a < 0:
@@ -91,9 +91,9 @@ def if8():
 def if9():
     a, b = read_and_check("Введите 2 числа: ", 2, output_type="float")
     if a < b:
-        print(f"после перераспределения значений переменных A = {a}, B = {a}")
+        print(f"После перераспределения значений переменных A = {a}, B = {a}")
     elif b < a:
-        print(f"после перераспределения значений переменных A = {b}, B = {a}")
+        print(f"После перераспределения значений переменных A = {b}, B = {a}")
     else:
         print("Числа равны")
 
@@ -101,23 +101,20 @@ def if9():
 def if10():
     a, b = read_and_check("Введите 2 числа: ", 2, output_type="int")
     if a == b:
-        a, b = 0, 0
+        a = b = 0
         print(f"Числа равны. Новые значения A = {a}, B = {b}")
     else:
-        a = a + b
-        b = a + b
+        a = b = a + b
         print(f"Числа не равны. Новые значения А = {a}, B = {b}")
 
 
 def if11():
     a, b = read_and_check("Введите 2 числа: ", 2, output_type="int")
     if a != b:
-        max_of_two = max(a, b)
-        a = max_of_two
-        b = max_of_two
+        a = b = max(a, b)
         print(f"Числа не равны, новые значения А = {a}, B = {b}")
     else:
-        a, b = 0, 0
+        a = b = 0
         print(f"Числа равны, новые значения А = {a}, B = {b}")
 
 
