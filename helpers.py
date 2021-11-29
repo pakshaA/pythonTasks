@@ -1,18 +1,20 @@
 import sys
 
 
-def merge_dicts(first, second, third):
+def merge_dicts(first, second, third, fourth):
     version = sys.version_info
     if version.major >= 3 and version.minor >= 5:
         merged_dict = {
             **first,
             **second,
-            **third
+            **third,
+            **fourth
         }
     else:
         merged_dict = first.copy()
         merged_dict.update(second)
         merged_dict.update(third)
+        merged_dict.update(fourth)
     return merged_dict
 
 
