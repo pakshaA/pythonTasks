@@ -3,7 +3,7 @@ from helpers import read_and_check
 
 def boolean1():
     print("Проверить, является ли число положительным.")
-    a = read_and_check("Введите ваше число: ", output_type="float")
+    a = read_and_check("Введите число: ", output_type="float")
     if a > 0:
         print(f"Число {a} - положительное.")
     elif a == 0:
@@ -17,8 +17,6 @@ def boolean2():
     a = read_and_check("Введите число : ", output_type="float")
     if a % 2 != 0:
         print(f"Число {a} - нечетное")
-    elif a == 0:
-        print(f"Число {a} не является четным или четным. ")
     else:
         print(f"Число {a} - четное")
 
@@ -28,8 +26,6 @@ def boolean3():
     a = read_and_check("Введите число : ", output_type="float")
     if a % 2 != 0:
         print(f"Число {a} - нечетное")
-    elif a == 0:
-        print(f"Число {a} не является четным или четным. ")
     else:
         print(f"Число {a} - четное")
 
@@ -100,7 +96,7 @@ def boolean10():
 def boolean11():
     print("Проверить справедливость выражения: Числа А и В имеют одинаковую четность.")
     a, b = read_and_check("Введите числа А и Б через пробел: ", 2, ["Число A ", "Число B "], "float")
-    if (a+b) % 2 != 0:
+    if (a+b) % 2 == 0:
         print("Выражение справедливо.")
     else:
         print("Выражение несправедливо")
@@ -127,11 +123,11 @@ def boolean13():
 def boolean14():
     print("Проверить справедливость выражения: Только одно из чисел А, В и С - положительное.")
     a, b, c = read_and_check("Введите числа А, Б и С через пробел: ", 3, ["Число A ", "Число B ", "Число C "], "float")
-    if a > 0 and b < 0 and c < 0:
+    if a > 0 and b <= 0 and c <= 0:
         print("Выражение справедливо.")
-    elif b > 0 and c < 0 and a < 0:
+    elif b > 0 and c <= 0 and a <= 0:
         print("Выражение справедливо.")
-    elif c > 0 and a < 0 and b < 0:
+    elif c > 0 and a <= 0 and b <= 0:
         print("Выражение справедливо.")
     else:
         print("Выражение несправедливо")
